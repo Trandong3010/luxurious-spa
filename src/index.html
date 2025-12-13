@@ -1,13 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>LuxuriousSpa</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>LuxuriousSpa</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#d4af37',
+              'background-light': '#FAF9F6',
+              'background-dark': '#2d2a23',
+              'text-light-primary': '#5D5D5D',
+              'text-dark-primary': '#e0e0e0',
+              'text-light-secondary': '#8A9A5B',
+              'text-dark-secondary': '#a9b97b',
+              'border-light': '#e0ddd5',
+              'border-dark': '#4a463a',
+            },
+            fontFamily: {
+              display: ['Manrope', 'sans-serif'],
+            },
+            borderRadius: { DEFAULT: '0.5rem', lg: '0.75rem', xl: '1rem', full: '9999px' },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>
