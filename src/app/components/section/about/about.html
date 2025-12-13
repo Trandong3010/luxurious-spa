@@ -1,0 +1,30 @@
+<!-- About Section -->
+<section class="py-16 md:py-24" id="about">
+  <div class="max-w-7xl mx-auto px-6 sm:px-10">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="flex flex-col gap-4">
+        <h2
+          class="text-text-light-secondary dark:text-text-dark-secondary text-sm font-bold uppercase tracking-wider"
+        >
+          {{ about().title }}
+        </h2>
+        <h1
+          class="text-text-light-primary dark:text-white tracking-tight text-4xl font-extrabold leading-tight md:text-5xl"
+        >
+          {{ about().sub_title }}
+        </h1>
+        <p class="text-base font-normal leading-relaxed">
+          {{ about().description }}
+        </p>
+      </div>
+      <div
+        class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+        data-alt="A tranquil interior shot of the spa, featuring minimalist decor and soft, natural light."
+        style="
+          background-image: url('{{ about().background }}');
+        "
+      ></div>
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
