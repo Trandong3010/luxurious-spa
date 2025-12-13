@@ -1,0 +1,30 @@
+<!-- Hero Section -->
+<section id="home">
+  <div class="@container">
+    <div class="@[480px]:p-0">
+      <div
+        class="flex min-h-[calc(100vh-80px)] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 items-center justify-center p-4 text-center"
+        data-alt="A serene spa background with soft lighting and natural elements"
+        style="
+          background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%),
+            url('{{ heroBanner().background }}');
+        "
+      >
+        <div class="flex flex-col gap-4">
+          <h1 class="text-white text-5xl font-extrabold leading-tight tracking-tighter md:text-7xl">
+            {{ heroBanner().title }}
+          </h1>
+          <h2 class="text-white/90 text-lg font-normal leading-normal md:text-xl">
+            {{ heroBanner().subtitle }}
+          </h2>
+        </div>
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors"
+        >
+          <span class="truncate">{{ heroBanner().buttonText }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Hero Section -->
