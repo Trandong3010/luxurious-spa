@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { Hero } from "../../components/section/hero-banner/hero-banner";
-import { AboutSection } from "../../components/section/about/about";
-import { ServicesSection } from "../../components/section/services/services";
+import { Hero } from '../../components/section/hero-banner/hero-banner';
+import { AboutSection } from '../../components/section/about/about';
+import { ServicesSection } from '../../components/section/services/services';
+import { ImageGallery } from '../../components/section/image-gallery/image-gallery';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, AboutSection, ServicesSection],
+  imports: [Hero, AboutSection, ServicesSection, ImageGallery],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {
-
-}
+export class Home {}
