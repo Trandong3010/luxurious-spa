@@ -1,0 +1,5 @@
+[build]
+  # Set the output directory for your Angular application
+  publish = "dist/luxurious-spa/browser"
+  # Keep your existing build command (e.g., 'ng build')
+  # command = "ng build"
