@@ -1,5 +1,14 @@
 # LuxuriousSpa
 
+**Aura spa** is a **free Angular SPA template** built with Angular 20 and Tailwind CSS. It is designed to be a quick and professional landing page template for developers/makers who want to create a quick and professional landing page for their open source projects, SaaS products, online services, and more.
+
+**UPDATE 2025-15-12**
+
+## Live demo
+
+Check the live demo here 👉️ [https://aura-spa-page.netlify.app/](https://aura-spa-page.netlify.app/)
+
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
 
 ## Development server
