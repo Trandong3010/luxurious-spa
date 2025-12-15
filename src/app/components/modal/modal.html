@@ -1,0 +1,67 @@
+<!-- Modal Overlay -->
+@if(isOpen()) {
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4">
+  <!-- Backdrop -->
+  <div
+    (click)="close()"
+    class="absolute inset-0 bg-background-dark/60 backdrop-blur-sm transition-opacity"
+  ></div>
+  <!-- Modal Content -->
+  <div
+    class="relative w-full max-w-[600px] transform overflow-hidden rounded-xl bg-white dark:bg-[#1a1814] shadow-2xl transition-all border border-[#e6e3db]/20 dark:border-white/10"
+  >
+    <!-- Close Button -->
+    <button
+      type="button"
+      (click)="close()"
+      class="absolute right-4 top-4 rounded-full p-2 text-[#8a8060] hover:bg-[#f8f8f5] dark:hover:bg-white/10 dark:text-gray-400 transition-colors focus:outline-none"
+    >
+      <span class="material-symbols-outlined text-2xl">close</span>
+    </button>
+    <div class="flex flex-col p-8 md:p-10">
+      <!-- Header Section -->
+      <div class="mb-8 text-center">
+        <div class="mb-3 inline-flex items-center justify-center rounded-full bg-primary/10 p-3">
+          <span class="material-symbols-outlined text-primary text-2xl">spa</span>
+        </div>
+        <h3
+          class="text-[#181611] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]"
+        >
+          {{ title() }}
+        </h3>
+        <p class="mt-2 text-[#8a8060] dark:text-gray-400 text-sm">
+          {{ subTitle() }}
+        </p>
+      </div>
+      <!-- Render component dynamics -->
+      <ng-container *ngComponentOutlet="content()"></ng-container>
+      <!-- Actions -->
+      <div class="mt-8 flex items-center justify-end gap-3">
+        <button
+          type="button"
+          (click)="close()"
+          class="hidden sm:flex h-12 px-6 items-center justify-center rounded-lg text-[#181611] dark:text-gray-300 font-bold hover:bg-[#f8f8f5] dark:hover:bg-white/5 transition-colors"
+        >
+          Cancel
+        </button>
+        @for (item of action(); track $index) {
+        <button
+          type="button"
+          (click)="item.callback()"
+          class="flex w-full sm:w-auto min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-primary hover:bg-primary/90 text-[#181611] text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 transition-all duration-200 hover:shadow-primary/40 transform active:scale-95"
+        >
+          <span class="flex items-center gap-2">
+            <span>{{ item.text }}</span>
+            <span class="material-symbols-outlined text-[20px]">{{ item.icon }}</span>
+          </span>
+        </button>
+        }
+      </div>
+    </div>
+    <!-- Decorative Elements -->
+    <div
+      class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent"
+    ></div>
+  </div>
+</div>
+}
