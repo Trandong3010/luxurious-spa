@@ -1,14 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CounterStore } from './store/counter.store';
+import { Modal } from './components/modal/modal';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Modal],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
-export class App {
-  // Inject the Signal Store
-  protected readonly counterStore = inject(CounterStore);
-}
+export class App {}

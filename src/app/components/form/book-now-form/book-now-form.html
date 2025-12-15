@@ -1,0 +1,130 @@
+<!-- Scrollable Content Area -->
+<div class="modal-content overflow-y-auto overflow-x-hidden flex-1 p-8 sm:p-10 pt-12">
+  <!-- Header Section -->
+  <div class="flex flex-col items-center text-center mb-10">
+    <span class="text-primary text-sm font-bold tracking-widest uppercase mb-2"
+      >Book Appointment</span
+    >
+    <h2
+      class="text-[#181611] dark:text-white tracking-tight text-[32px] sm:text-[40px] font-bold leading-tight"
+    >
+      Reserve Your Bliss
+    </h2>
+    <p class="text-[#8a8060] dark:text-[#a39b7d] mt-3 text-lg max-w-md mx-auto">
+      Select your preferred treatment and schedule your moment of relaxation.
+    </p>
+  </div>
+  <!-- Form Grid -->
+  <form class="w-full max-w-[640px] mx-auto space-y-6">
+    <!-- Service Type -->
+    <div class="flex flex-col">
+      <label class="text-[#181611] dark:text-[#eaeaea] text-sm font-semibold mb-2 ml-1"
+        >Service Type</label
+      >
+      <div class="relative">
+        <select
+          class="appearance-none w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 pr-10 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium cursor-pointer"
+        >
+          <option disabled="" selected="" value="">Select a treatment...</option>
+          <option value="massage">Swedish Massage (60 min)</option>
+          <option value="facial">Deep Cleansing Facial (45 min)</option>
+          <option value="stone">Hot Stone Therapy (90 min)</option>
+          <option value="aromatherapy">Aromatherapy Session (60 min)</option>
+        </select>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#8a8060]"
+        >
+          <span class="material-symbols-outlined">expand_more</span>
+        </div>
+      </div>
+    </div>
+    <!-- Date & Time Row -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="flex flex-col">
+        <label class="text-[#181611] dark:text-[#eaeaea] text-sm font-semibold mb-2 ml-1"
+          >Date</label
+        >
+        <div class="relative">
+          <input
+            class="w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium"
+            type="date"
+          />
+          <div
+            class="pointer-events-none absolute inset-y-0 right-4 flex items-center text-[#8a8060]"
+          >
+            <!-- Date picker icon hidden visually as modern browsers show their own, but kept for layout balance if needed or could use custom JS picker -->
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <label class="text-[#181611] dark:text-[#eaeaea] text-sm font-semibold mb-2 ml-1"
+          >Time</label
+        >
+        <div class="relative">
+          <select
+            class="appearance-none w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 pr-10 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium cursor-pointer"
+          >
+            <option disabled="" selected="" value="">Select time...</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="13:00">01:00 PM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+          </select>
+          <div
+            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#8a8060]"
+          >
+            <span class="material-symbols-outlined">schedule</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Guests -->
+    <div class="flex flex-col">
+      <label class="text-[#181611] dark:text-[#eaeaea] text-sm font-semibold mb-2 ml-1"
+        >Number of Guests</label
+      >
+      <div class="relative">
+        <select
+          class="appearance-none w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 pr-10 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium cursor-pointer"
+        >
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4+ Guests (Please contact us)</option>
+        </select>
+        <div
+          class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#8a8060]"
+        >
+          <span class="material-symbols-outlined">group</span>
+        </div>
+      </div>
+    </div>
+    <!-- Special Requests -->
+    <div class="flex flex-col">
+      <label class="text-[#181611] dark:text-[#eaeaea] text-sm font-semibold mb-2 ml-1"
+        >Special Requests
+        <span class="text-[#8a8060] font-normal text-xs ml-1">(Optional)</span></label
+      >
+      <textarea
+        class="w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium resize-none"
+        placeholder="Any allergies, injuries, or preferences?"
+        rows="3"
+      ></textarea>
+    </div>
+    <!-- Submit Button -->
+    <div class="pt-6">
+      <button
+        class="w-full flex items-center justify-center rounded-lg h-14 bg-primary hover:bg-[#dca60e] text-[#181611] font-bold text-lg tracking-wide transition-colors duration-200 shadow-md hover:shadow-lg"
+        type="button"
+      >
+        Confirm Booking
+      </button>
+      <p class="text-center text-xs text-[#8a8060] dark:text-[#a39b7d] mt-4">
+        No payment required until arrival. Cancellation policy applies.
+      </p>
+    </div>
+  </form>
+</div>
+<!-- End of Scrollable Content Area -->

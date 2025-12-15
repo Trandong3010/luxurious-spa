@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { MenuItems } from '../../../constants/route.constants';
-import { Menu } from '../../../models/menu.interface';
+import { Menu } from '../../../models/menu.model';
 import { RouterLink } from "@angular/router";
 
 @Component({

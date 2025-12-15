@@ -1,4 +1,10 @@
-<app-hero-banner />
+<app-hero-banner
+  [background]="heroBanner().background"
+  [title]="heroBanner().title"
+  [subtitle]="heroBanner().subtitle"
+  [buttonText]="heroBanner().buttonText"
+  (onClick)="handleHeroClick()"
+></app-hero-banner>
 <app-about />
 <app-services />
 <app-image-gallery />

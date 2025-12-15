@@ -1,4 +1,4 @@
-import { Menu } from '../models/menu.interface';
+import { Menu } from '../models/menu.model';
 
 /**
  * Application route constants
