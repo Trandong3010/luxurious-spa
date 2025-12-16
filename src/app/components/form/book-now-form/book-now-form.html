@@ -15,7 +15,7 @@
     </p>
   </div>
   <!-- Form Grid -->
-  <form class="w-full max-w-[640px] mx-auto space-y-6">
+  <form [formGroup]="form" class="w-full max-w-[640px] mx-auto space-y-6" errorTailor>
     <!-- Service Type -->
     <div class="flex flex-col">
       <label class="text-[#181611] dark:text-[#eaeaea] text-sm font-semibold mb-2 ml-1"
@@ -23,6 +23,7 @@
       >
       <div class="relative">
         <select
+          formControlName="serviceType"
           class="appearance-none w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 pr-10 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium cursor-pointer"
         >
           <option disabled="" selected="" value="">Select a treatment...</option>
@@ -46,6 +47,7 @@
         >
         <div class="relative">
           <input
+            formControlName="date"
             class="w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium"
             type="date"
           />
@@ -62,6 +64,7 @@
         >
         <div class="relative">
           <select
+            formControlName="time"
             class="appearance-none w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 pr-10 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium cursor-pointer"
           >
             <option disabled="" selected="" value="">Select time...</option>
@@ -87,6 +90,7 @@
       >
       <div class="relative">
         <select
+          formControlName="guests"
           class="appearance-none w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 pr-10 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium cursor-pointer"
         >
           <option value="1">1 Guest</option>
@@ -108,6 +112,7 @@
         <span class="text-[#8a8060] font-normal text-xs ml-1">(Optional)</span></label
       >
       <textarea
+        formControlName="specialRequests"
         class="w-full bg-background-light dark:bg-[#2c281b] border-0 border-b-2 border-[#e6e3db] dark:border-[#444] rounded-lg px-4 py-4 text-[#181611] dark:text-white placeholder-[#8a8060] focus:outline-none focus:ring-0 focus:border-primary transition-all text-base font-medium resize-none"
         placeholder="Any allergies, injuries, or preferences?"
         rows="3"

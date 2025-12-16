@@ -1,17 +1,25 @@
 <!-- Form Fields -->
-<div class="space-y-5">
+<form [formGroup]="form" class="space-y-5" errorTailor>
   <!-- Row 1: Name & Email -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-    <app-input-field label="Name" placeholder="Your Full Name" />
-    <app-input-field label="Email Address" placeholder="you@example.com" />
+    <app-input-field [control]="form.controls['name']" label="Name" placeholder="Your Full Name" />
+    <app-input-field
+      [control]="form.controls['email']"
+      label="Email Address"
+      placeholder="you@example.com"
+    />
   </div>
   <!-- Row 2: Subject -->
   <app-input-field
-    label="Subject"
+    [control]="form.controls['subject']"
     placeholder="What is this regarding?"
     icon="chat_bubble_outline"
   />
   <!-- Row 3: Message -->
-  <app-input-area label="Your Message" placeholder="How can we help you find serenity?" />
-</div>
+  <app-input-area
+    [control]="form.controls['message']"
+    label="Your Message"
+    placeholder="How can we help you find serenity?"
+  />
+</form>
 <!-- End Form Fields -->

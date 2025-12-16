@@ -8,8 +8,7 @@
         icon() ? 'pl-10' : ''
       }}"
       placeholder="{{ placeholder() }}"
-      [value]="value()"
-      (input)="onInput($event)"
+      [formControl]="control()!"
       [disabled]="disabled()"
       [required]="required()"
       [type]="type()"
@@ -21,8 +20,8 @@
     }
   </div>
   <div>
-    @if (error()) {
-    <p class="mt-2 text-sm text-red-600">{{ error() }}</p>
+    @if (control()?.errors?.['required']) {
+    <p class="mt-2 text-sm text-red-600">{{ 'This field is required' }}</p>
     }
   </div>
 </div>
