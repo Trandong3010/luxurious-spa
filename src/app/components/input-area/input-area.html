@@ -6,15 +6,14 @@
     <textarea
       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#181611] dark:text-white dark:bg-white/5 focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#e6e3db] dark:border-white/10 bg-white focus:border-primary min-h-[140px] placeholder:text-[#8a8060]/60 p-[15px] text-base font-normal leading-normal transition-all duration-200 ease-in-out"
       placeholder="{{ placeholder() }}"
-      [value]="value()"
-      (input)="onInput($event)"
       [disabled]="disabled()"
       [required]="required()"
+      [formControl]="control()!"
     ></textarea>
   </div>
   <div>
-    @if (error()) {
-    <p class="mt-2 text-sm text-red-600">{{ error() }}</p>
+    @if (control()?.errors?.['required']) {
+    <p class="mt-2 text-sm text-red-600">{{ 'This field is required' }}</p>
     }
   </div>
 </div>
